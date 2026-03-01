@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberGear — Магазин компьютерных аксессуаров</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <a href="index.html"><img src="images/logo.png" alt="CyberGear" class="logo-img"></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#categories">Каталог</a></li>
+                    <li><a href="#recommendations">Новинки</a></li>
+                    <li><a href="#offers">Спецпредложения</a></li>
+                </ul>
+            </nav>
+            <div class="user-menu">
+                <a href="cart.html" class="btn-cart">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </a>
+                <a href="profile.html" class="btn-account">
+                    <i class="far fa-user"></i>
+                    <span>Кабинет</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="offers">
+            <div class="container">
+                <div class="promo-banner">
+                    <div class="promo-content">
+                        <h3>Сезонное обновление рабочего места</h3>
+                        <p>Новое поступление эргономичных аксессуаров для продуктивной работы и отдыха.</p>
+                        <a href="#" class="btn-primary">Смотреть каталог</a>
+                    </div>
+                    <div class="promo-image">
+                        <img src="images/promo.png" alt="Promo Image" class="promo-img">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="categories">
+            <div class="container">
+                <h2>Популярные категории</h2>
+                <div class="categories-grid">
+                    <a href="category.html?type=keyboards" class="category-card"><i class="fas fa-keyboard"></i><span>Клавиатуры</span></a>
+                    <a href="category.html?type=mice" class="category-card"><i class="fas fa-mouse"></i><span>Мыши</span></a>
+                    <a href="category.html?type=audio" class="category-card"><i class="fas fa-headphones"></i><span>Звук</span></a>
+                    <a href="category.html?type=monitors" class="category-card"><i class="fas fa-desktop"></i><span>Мониторы</span></a>
+                    <a href="category.html?type=storage" class="category-card"><i class="fas fa-hdd"></i><span>Накопители</span></a>
+                    <a href="category.html?type=cables" class="category-card"><i class="fas fa-plug"></i><span>Кабели</span></a>
+                    <a href="category.html?type=chairs" class="category-card"><i class="fas fa-chair"></i><span>Кресла</span></a>
+                </div>
+            </div>
+        </section>
+
+        <section id="benefits">
+            <div class="container">
+                <div class="benefits-grid">
+                    <div class="benefit-item">
+                        <i class="fas fa-truck-fast"></i>
+                        <div class="benefit-text">
+                            <h4>Быстрая доставка</h4>
+                            <p>Отправка в день заказа по всей стране</p>
+                        </div>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-shield-alt"></i>
+                        <div class="benefit-text">
+                            <h4>Гарантия качества</h4>
+                            <p>Официальная гарантия от производителя</p>
+                        </div>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-headset"></i>
+                        <div class="benefit-text">
+                            <h4>Поддержка 24/7</h4>
+                            <p>Поможем с выбором и настройкой</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="recommendations">
+            <div class="container">
+                <h2>Рекомендуемые товары</h2>
+                <div class="products-grid">
+                    <div class="product-card">
+                        <div class="product-img">
+                            <img src="images/kb_silent.png" alt="Механическая клавиатура Silent" class="product-thumb">
+                        </div>
+                        <div class="product-info">
+                            <h3>Механическая клавиатура Silent</h3>
+                            <p class="price">7 990 ₽</p>
+                            <button class="btn-add">В корзину</button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-img">
+                            <img src="images/mouse_precision.png" alt="Оптическая мышь Precision" class="product-thumb">
+                        </div>
+                        <div class="product-info">
+                            <h3>Оптическая мышь Precision</h3>
+                            <p class="price">3 450 ₽</p>
+                            <button class="btn-add">В корзину</button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-img">
+                            <img src="images/headphones_air.png" alt="Студийные наушники Air" class="product-thumb">
+                        </div>
+                        <div class="product-info">
+                            <h3>Студийные наушники Air</h3>
+                            <p class="price">11 200 ₽</p>
+                            <button class="btn-add">В корзину</button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-img">
+                            <img src="images/mousepad_l.png" alt="Коврик для мыши (L)" class="product-thumb">
+                        </div>
+                        <div class="product-info">
+                            <h3>Коврик для мыши (L)</h3>
+                            <p class="price">1 200 ₽</p>
+                            <button class="btn-add">В корзину</button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-img">
+                            <img src="images/mic_streamer.png" alt="Микрофон Streamer Pro" class="product-thumb">
+                        </div>
+                        <div class="product-info">
+                            <h3>Микрофон Streamer Pro</h3>
+                            <p class="price">9 100 ₽</p>
+                            <button class="btn-add">В корзину</button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-img">
+                            <img src="images/monitor_arm.png" alt="Кронштейн для монитора" class="product-thumb">
+                        </div>
+                        <div class="product-info">
+                            <h3>Кронштейн для монитора</h3>
+                            <p class="price">4 800 ₽</p>
+                            <button class="btn-add">В корзину</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="index.html" class="footer-logo"><img src="images/logo.png" alt="CyberGear" class="logo-img"></a>
+                <p>Ваш надежный гид в мире высококачественной компьютерной атрибутики и аксессуаров. Мы объединяем стиль и технологии.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Магазин</h4>
+                <ul>
+                    <li><a href="#categories">Каталог</a></li>
+                    <li><a href="#recommendations">Новинки</a></li>
+                    <li><a href="#offers">Акции</a></li>
+                    <li><a href="#">Доставка</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Покупателям</h4>
+                <ul>
+                    <li><a href="profile.html">Личный кабинет</a></li>
+                    <li><a href="#">Мои заказы</a></li>
+                    <li><a href="#">Помощь</a></li>
+                    <li><a href="#">Гарантия</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Контакты</h4>
+                <p>Москва, ул. Технологий, 42</p>
+                <p>8 (800) 555-35-35</p>
+                <div class="socials">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-telegram-plane"></i></a>
+                    <a href="#"><i class="fab fa-vk"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; 2026 CyberGear Store. Эстетика и функциональность.</p>
+            <p><a href="#">Политика конфиденциальности</a></p>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>

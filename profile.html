@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Личный кабинет — CyberGear</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <a href="index.html"><img src="images/logo.png" alt="CyberGear" class="logo-img"></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html#categories">Каталог</a></li>
+                    <li><a href="index.html#recommendations">Новинки</a></li>
+                    <li><a href="index.html#offers">Спецпредложения</a></li>
+                </ul>
+            </nav>
+            <div class="user-menu">
+                <a href="cart.html" class="btn-cart">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </a>
+                <a href="profile.html" class="btn-account active">
+                    <i class="fas fa-user"></i>
+                    <span>Кабинет</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="auth-section" id="auth-view" style="display: none;">
+            <div class="container">
+                <div class="auth-container">
+                    <div class="auth-tabs">
+                        <button class="auth-tab active">Вход</button>
+                        <button class="auth-tab">Регистрация</button>
+                    </div>
+                    <form class="auth-form">
+                        <div class="form-group">
+                            <label>Электронная почта</label>
+                            <input type="email" placeholder="email@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label>Пароль</label>
+                            <input type="password" placeholder="••••••••">
+                        </div>
+                        <button type="submit" class="btn-primary auth-submit">Войти в аккаунт</button>
+                        <p class="auth-footer"><a href="#">Забыли пароль?</a></p>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section class="profile-section" id="profile-view">
+            <div class="container">
+                <div class="profile-layout">
+                    <aside class="profile-sidebar">
+                        <div class="profile-user-card">
+                            <div class="user-avatar">ПФ</div>
+                            <div class="user-meta">
+                                <h3>Павел Фиалковский</h3>
+                                <p>pavelfialkovskij748@gmail.com</p>
+                            </div>
+                        </div>
+                        <nav class="profile-nav">
+                            <a href="#orders" class="active"><i class="fas fa-shopping-bag"></i> Мои заказы</a>
+                            <a href="#bonuses"><i class="fas fa-wallet"></i> Бонусный счет</a>
+                            <a href="#settings"><i class="fas fa-cog"></i> Настройки профиля</a>
+                            <a href="#" class="logout"><i class="fas fa-sign-out-alt"></i> Выйти</a>
+                        </nav>
+                    </aside>
+
+                    <div class="profile-content">
+                        <div id="orders-section" class="profile-tab-content">
+                            <div class="content-header">
+                                <h2>История заказов</h2>
+                            </div>
+                            
+                            <div class="orders-list">
+                                <div class="order-item">
+                                    <div class="order-info">
+                                        <span class="order-number">Заказ №34215</span>
+                                        <span class="order-date">от 24 февраля 2026</span>
+                                    </div>
+                                    <div class="order-status delivered">Доставлен</div>
+                                    <div class="order-details">
+                                        <p>Механическая клавиатура Silent, Коврик для мыши (L)</p>
+                                        <span class="order-price">9 190 ₽</span>
+                                    </div>
+                                </div>
+
+                                <div class="order-item">
+                                    <div class="order-info">
+                                        <span class="order-number">Заказ №34102</span>
+                                        <span class="order-date">от 15 января 2026</span>
+                                    </div>
+                                    <div class="order-status delivered">Доставлен</div>
+                                    <div class="order-details">
+                                        <p>Оптическая мышь Precision</p>
+                                        <span class="order-price">3 450 ₽</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="bonuses-section" class="profile-tab-content" style="display: none;">
+                            <div class="content-header">
+                                <h2>Бонусный счет</h2>
+                            </div>
+                            <div class="bonuses-visual">
+                                <div class="bonus-balance-card">
+                                    <div class="bonus-main">
+                                        <i class="fas fa-coins"></i>
+                                        <div class="balance-info">
+                                            <span class="balance-amount">450</span>
+                                            <span class="balance-label">активных баллов</span>
+                                        </div>
+                                    </div>
+                                    <div class="bonus-status">
+                                        <span>Ваш статус: <strong>Silver</strong></span>
+                                        <div class="status-progress">
+                                            <div class="progress-bar" style="width: 65%;"></div>
+                                        </div>
+                                        <p class="status-note">До статуса Gold осталось 150 баллов</p>
+                                    </div>
+                                </div>
+
+                                <div class="bonus-history">
+                                    <h3>История начислений</h3>
+                                    <div class="history-list">
+                                        <div class="history-item">
+                                            <div class="history-info">
+                                                <span class="history-title">Заказ №34215</span>
+                                                <span class="history-date">24.02.2026</span>
+                                            </div>
+                                            <span class="history-amount positive">+120 Б</span>
+                                        </div>
+                                        <div class="history-item">
+                                            <div class="history-info">
+                                                <span class="history-title">Бонус за регистрацию</span>
+                                                <span class="history-date">10.01.2026</span>
+                                            </div>
+                                            <span class="history-amount positive">+300 Б</span>
+                                        </div>
+                                        <div class="history-item">
+                                            <div class="history-info">
+                                                <span class="history-title">Списание за заказ №34102</span>
+                                                <span class="history-date">15.01.2026</span>
+                                            </div>
+                                            <span class="history-amount negative">-150 Б</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="settings-section" class="profile-tab-content" style="display: none;">
+                            <div class="content-header">
+                                <h2>Настройки профиля</h2>
+                            </div>
+                            <form class="settings-form">
+                                <div class="form-grid">
+                                    <div class="form-group">
+                                        <label>Имя</label>
+                                        <input type="text" value="Павел">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Фамилия</label>
+                                        <input type="text" value="Фиалковский">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Телефон</label>
+                                        <input type="tel" value="+7 (999) 000-00-00">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Город доставки</label>
+                                        <input type="text" value="Москва">
+                                    </div>
+                                </div>
+                                <div class="form-group full-width">
+                                    <label>Адрес доставки</label>
+                                    <input type="text" value="ул. Технологий, д. 42, кв. 128">
+                                </div>
+                                <button type="submit" class="btn-primary settings-save">Сохранить изменения</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="index.html" class="footer-logo"><img src="images/logo.png" alt="CyberGear" class="logo-img"></a>
+                <p>Ваш надежный гид в мире высококачественной компьютерной атрибутики и аксессуаров. Мы объединяем стиль и технологии.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Магазин</h4>
+                <ul>
+                    <li><a href="index.html#categories">Каталог</a></li>
+                    <li><a href="index.html#recommendations">Новинки</a></li>
+                    <li><a href="index.html#offers">Акции</a></li>
+                    <li><a href="#">Доставка</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Покупателям</h4>
+                <ul>
+                    <li><a href="profile.html">Личный кабинет</a></li>
+                    <li><a href="#">Мои заказы</a></li>
+                    <li><a href="#">Помощь</a></li>
+                    <li><a href="#">Гарантия</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Контакты</h4>
+                <p>Москва, ул. Технологий, 42</p>
+                <p>8 (800) 555-35-35</p>
+                <div class="socials">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-telegram-plane"></i></a>
+                    <a href="#"><i class="fab fa-vk"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; 2026 CyberGear Store. Эстетика и функциональность.</p>
+            <p><a href="#">Политика конфиденциальности</a></p>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Корзина — CyberGear</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <a href="index.html"><img src="images/logo.png" alt="CyberGear" class="logo-img"></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html#categories">Каталог</a></li>
+                    <li><a href="index.html#recommendations">Новинки</a></li>
+                    <li><a href="index.html#offers">Спецпредложения</a></li>
+                </ul>
+            </nav>
+            <div class="user-menu">
+                <a href="cart.html" class="btn-cart active">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </a>
+                <a href="profile.html" class="btn-account">
+                    <i class="far fa-user"></i>
+                    <span>Кабинет</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="cart-section">
+            <div class="container">
+                <h2>Ваша корзина</h2>
+                <div class="cart-layout">
+                    <div class="cart-items">
+                        <p class="empty-cart-msg">Загрузка корзины...</p>
+                    </div>
+
+                    <aside class="cart-summary">
+                        <div class="summary-card">
+                            <h3>Детали заказа</h3>
+                            <div class="summary-row">
+                                <span>Товары (0)</span>
+                                <span>0 ₽</span>
+                            </div>
+                            <div class="summary-row">
+                                <span>Доставка</span>
+                                <span class="free">Бесплатно</span>
+                            </div>
+                            <div class="summary-divider"></div>
+                            <div class="summary-total">
+                                <span>Итого к оплате</span>
+                                <span>0 ₽</span>
+                            </div>
+                            <button class="btn-primary checkout-btn" disabled>Оформить заказ</button>
+                            <p class="summary-note">Добавьте товары, чтобы оформить заказ</p>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="payment-modal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <div class="payment-header">
+                <h2>Оплата заказа</h2>
+                <p>Введите данные банковской карты</p>
+            </div>
+            
+            <div class="card-visual-container">
+                <div class="card-visual" id="card-visual">
+                    <div class="card-front">
+                        <div class="card-chip"></div>
+                        <div class="card-logo site-card-logo">
+                            <img src="images/logo.png" alt="CyberGear">
+                        </div>
+                        <div class="card-number-display">•••• •••• •••• ••••</div>
+                        <div class="card-bottom">
+                            <div class="card-holder-display">CARDHOLDER NAME</div>
+                            <div class="card-expiry-display">MM/YY</div>
+                        </div>
+                    </div>
+                    <div class="card-back">
+                        <div class="card-strip"></div>
+                        <div class="card-cvv-box">
+                            <span>CVV</span>
+                            <div class="cvv-display">•••</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <form id="payment-form">
+                <div class="form-group">
+                    <label>Номер карты</label>
+                    <input type="text" id="card-number" placeholder="0000 0000 0000 0000" maxlength="19" required>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Срок действия</label>
+                        <input type="text" id="card-expiry" placeholder="ММ/ГГ" maxlength="5" required>
+                    </div>
+                    <div class="form-group">
+                        <label>CVC / CVV</label>
+                        <input type="password" id="card-cvv" placeholder="•••" maxlength="3" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Имя владельца</label>
+                    <input type="text" id="card-holder" placeholder="IVAN IVANOV" style="text-transform: uppercase;" required>
+                </div>
+                <button type="submit" class="btn-primary pay-btn">Оплатить <span id="pay-amount">0</span> ₽</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="success-notification" class="notification">
+        <div class="notification-content">
+            <i class="fas fa-check-circle"></i>
+            <p>Оплата прошла успешно!</p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="index.html" class="footer-logo"><img src="images/logo.png" alt="CyberGear" class="logo-img"></a>
+                <p>Ваш надежный гид в мире высококачественной компьютерной атрибутики и аксессуаров. Мы объединяем стиль и технологии.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Магазин</h4>
+                <ul>
+                    <li><a href="index.html#categories">Каталог</a></li>
+                    <li><a href="index.html#recommendations">Новинки</a></li>
+                    <li><a href="index.html#offers">Акции</a></li>
+                    <li><a href="#">Доставка</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Покупателям</h4>
+                <ul>
+                    <li><a href="profile.html">Личный кабинет</a></li>
+                    <li><a href="#">Мои заказы</a></li>
+                    <li><a href="#">Помощь</a></li>
+                    <li><a href="#">Гарантия</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Контакты</h4>
+                <p>Москва, ул. Технологий, 42</p>
+                <p>8 (800) 555-35-35</p>
+                <div class="socials">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-telegram-plane"></i></a>
+                    <a href="#"><i class="fab fa-vk"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; 2026 CyberGear Store. Эстетика и функциональность.</p>
+            <p><a href="#">Политика конфиденциальности</a></p>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>
